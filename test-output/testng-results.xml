@@ -1,205 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="1" skipped="1">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-09T12:39:58 IST" name="Default suite" finished-at="2025-09-09T12:41:29 IST" duration-ms="90703">
+  <suite started-at="2025-09-22T10:55:48 IST" name="Default suite" finished-at="2025-09-22T10:56:07 IST" duration-ms="18249">
     <groups>
     </groups>
-    <test started-at="2025-09-09T12:39:58 IST" name="Default test" finished-at="2025-09-09T12:41:29 IST" duration-ms="90703">
-      <class name="tests.Orange_website">
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:39:59 IST" name="setup" finished-at="2025-09-09T12:40:01 IST" duration-ms="2934" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.Orange_website.home_page() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
+    <test started-at="2025-09-22T10:55:48 IST" name="Default test" finished-at="2025-09-22T10:56:07 IST" duration-ms="18249">
+      <class name="tests.Try_testing_this">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.Try_testing_this@34123d65]" started-at="2025-09-22T10:55:48 IST" name="setup" finished-at="2025-09-22T10:55:51 IST" duration-ms="2818" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="home_page()[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:40:01 IST" name="home_page" finished-at="2025-09-09T12:40:49 IST" duration-ms="47364" status="FAIL">
-          <exception class="com.microsoft.playwright.TimeoutError">
-            <message>
-              <![CDATA[Error {
-  message='Timeout 30000ms exceeded.
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\dispatchers\dispatcher.js:322:39)
-}
-Call log:
--   - waiting for locator("Recruitment")
-]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[com.microsoft.playwright.TimeoutError: Error {
-  message='Timeout 30000ms exceeded.
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\dispatchers\dispatcher.js:322:39)
-}
-Call log:
--   - waiting for locator("Recruitment")
-
-at com.microsoft.playwright.impl.WaitableResult.get(WaitableResult.java:52)
-at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:138)
-at com.microsoft.playwright.impl.Connection.sendMessage(Connection.java:131)
-at com.microsoft.playwright.impl.ChannelOwner.sendMessage(ChannelOwner.java:124)
-at com.microsoft.playwright.impl.FrameImpl.clickImpl(FrameImpl.java:241)
-at com.microsoft.playwright.impl.PageImpl.click(PageImpl.java:680)
-at com.microsoft.playwright.Page.click(Page.java:3931)
-at tests.Orange_website.home_page(Orange_website.java:21)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-Caused by: com.microsoft.playwright.TimeoutError: Error {
-  message='Timeout 30000ms exceeded.
-  name='TimeoutError
-  stack='TimeoutError: Timeout 30000ms exceeded.
-    at ProgressController.run (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\progress.js:65:26)
-    at FrameDispatcher._runCommand (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\dispatchers\dispatcher.js:91:31)
-    at DispatcherConnection.dispatch (C:\Users\sneha\AppData\Local\Temp\playwright-java-6059222878871574451\package\lib\server\dispatchers\dispatcher.js:322:39)
-}
-Call log:
--   - waiting for locator("Recruitment")
-
-at com.microsoft.playwright.impl.Connection.dispatch(Connection.java:257)
-at com.microsoft.playwright.impl.Connection.processOneMessage(Connection.java:214)
-at com.microsoft.playwright.impl.ChannelOwner.runUntil(ChannelOwner.java:136)
-... 32 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- com.microsoft.playwright.TimeoutError -->
+        <test-method signature="testing_elements()[pri:0, instance:tests.Try_testing_this@34123d65]" started-at="2025-09-22T10:55:51 IST" name="testing_elements" finished-at="2025-09-22T10:56:06 IST" duration-ms="15104" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- home_page -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:40:49 IST" name="teardown" finished-at="2025-09-09T12:41:12 IST" duration-ms="23647" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=home_page status=FAILURE method=Orange_website.home_page()[pri:0, instance:tests.Orange_website@5b8dfcc1] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- testing_elements -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.Try_testing_this@34123d65]" started-at="2025-09-22T10:56:06 IST" name="teardown" finished-at="2025-09-22T10:56:07 IST" duration-ms="267" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:41:12 IST" name="setup" finished-at="2025-09-09T12:41:14 IST" duration-ms="1110" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.Orange_website.home_page2()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="home_page2()[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:41:14 IST" name="home_page2" finished-at="2025-09-09T12:41:14 IST" duration-ms="4" status="SKIP">
-          <exception class="org.testng.SkipException">
-            <message>
-              <![CDATA[skipping this test case]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.SkipException: skipping this test case
-at tests.Orange_website.home_page2(Orange_website.java:28)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.SkipException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- home_page2 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:41:14 IST" name="teardown" finished-at="2025-09-09T12:41:14 IST" duration-ms="238" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=home_page2 status=SKIP method=Orange_website.home_page2()[pri:0, instance:tests.Orange_website@5b8dfcc1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="setup(java.lang.reflect.Method)[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:41:14 IST" name="setup" finished-at="2025-09-09T12:41:15 IST" duration-ms="1013" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void tests.Orange_website.home_page3() throws java.lang.InterruptedException]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="home_page3()[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:41:15 IST" name="home_page3" finished-at="2025-09-09T12:41:29 IST" duration-ms="14089" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- home_page3 -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:tests.Orange_website@5b8dfcc1]" started-at="2025-09-09T12:41:29 IST" name="teardown" finished-at="2025-09-09T12:41:29 IST" duration-ms="253" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=home_page3 status=SUCCESS method=Orange_website.home_page3()[pri:0, instance:tests.Orange_website@5b8dfcc1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- tests.Orange_website -->
+      </class> <!-- tests.Try_testing_this -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -1,39 +1,29 @@
 package tests;
-import org.testng.SkipException;
+
 import org.testng.annotations.Test;
 
 
-
+import pages.directory;
 import Base.baseClass;
 import pages.Login;
 
 public class Orange_website extends baseClass {
-    @Test
+	@Test(priority = 1)
     public void home_page() throws InterruptedException  {
-    	test.info("navigating to the page");
+    	
     	page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+    	
+    	//object creation
     	Login login =new Login(page);
     	
     	login.login_credentials("Admin", "admin123");
-    	test.info("successful login");
-    	test.info("test completed");
-    	page.click("Recruitment");
-    	test.info("navigating to Recruitment page ");
+    	directory direct = new directory(page);
+    	direct.directory_form();
+    }
     
-    }
-    @Test
-    public void home_page2() {
-    	test.info("skipping this test case");
-    	throw new SkipException("skipping this test case");
-    }
-    @Test
-    public void home_page3() throws InterruptedException {
-    	test.info("navigating to the page");
-    	page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-    	Login login =new Login(page);
-    	
-    	login.login_credentials("Admin", "admin123");
-    	test.info("successful login");
-    	test.info("test completed");
-    }
+//	@Test(priority = 2, dependsOnMethods = {"home_page"})
+//    public void directory_page() {
+//    	directory direct = new directory(page);
+//    	direct.directory_form();
+//    }
 }
