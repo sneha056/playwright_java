@@ -2,7 +2,9 @@ package pages;
 
 import java.nio.file.Paths;
 
+import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
+import com.microsoft.playwright.options.WaitForSelectorState;
 
 public class try_testing_this_page {
 
@@ -28,6 +30,8 @@ public class try_testing_this_page {
 
 	public void checkbox() {
 		page.click(male_checkBox);
+		//wait is performed that when male_checkbox is clicked then only female_checkbox has to be clicked
+		page.waitForFunction("el => el.checked", male_checkBox, new Page.WaitForFunctionOptions().setTimeout(2000));
 		page.click(female_checkBox);
 	}
 
@@ -36,7 +40,7 @@ public class try_testing_this_page {
 		overall_scroll_operation();
 		// select option are the html selector which are used to make drodown
 		page.locator(dropdown).selectOption("option 3"); // here instead of option 3, variale cannot be used as above
-															// css selector are mentioned
+															
 	}
 
 	public void select_date() {
@@ -70,7 +74,18 @@ public class try_testing_this_page {
 		// Trigger the alert by clicking the button
 		page.locator("//button[normalize-space()='Your Sample Alert Button!']").click();
 	}
-
+	
+	public void doubleClick() {
+		scroll_inside_div_below();
+		page.waitForTimeout(2000);
+		page.dblclick("//button[text()='Double-click me']");
+		scroll_inside_div_above();
+		page.locator("#demo", new Page.LocatorOptions().setHasText("Your Sample Double Click worked!"))
+	    .waitFor(new Locator.WaitForOptions()
+	        .setState(WaitForSelectorState.VISIBLE)
+	        .setTimeout(5000));
+		page.waitForTimeout(4000);
+	}
 	public void picture_drag_drop() {
 		overall_scroll_operation();
 		System.out.println("inside drag and drop");
@@ -86,11 +101,11 @@ public class try_testing_this_page {
 	public void Sample_login() {
 		overall_scroll_operation();
 		page.waitForTimeout(2000);
-		scroll_inside_div();
+		scroll_inside_div_below();
 		page.waitForTimeout(2000);
 		page.fill(user_name, "test");
 		page.fill(password, "test");
-		scroll_inside_div();
+		scroll_inside_div_below();
 		page.click(submit_btn);
 		page.waitForTimeout(2000);
 	}
@@ -106,7 +121,10 @@ public class try_testing_this_page {
 		// page.evaluate("window.scrollTo(0, 0)");
 	}
 
-	public void scroll_inside_div() {
+	public void scroll_inside_div_below() {
 		page.evaluate("document.querySelector('.side.ex1').scrollTop = 500");
+	}
+	public void scroll_inside_div_above() {
+		 page.evaluate("document.querySelector('.side.ex1').scrollTop = 0");
 	}
 }
