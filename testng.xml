@@ -5,3 +5,23 @@
 		</classes>
 	</test>
 </suite>
+
+
+// to run test cases parallel
+<!-- <suite name="Parallel Suite" parallel="tests" thread-count="3">
+    <test name="Test1">
+        <classes>
+            <class name="tests.Orange_website"/> //orange_website is the name of website
+        </classes>
+    </test>
+    <test name="Test2">
+        <classes>
+            <class name="tests.Data_Annotation"/>
+        </classes>
+    </test>
+        <test name="Test3">
+        <classes>
+            <class name="tests.Try_testing_this"/>
+        </classes>
+    </test>
+</suite> -->
