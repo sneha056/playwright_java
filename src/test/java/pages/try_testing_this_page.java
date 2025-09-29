@@ -1,7 +1,10 @@
 package pages;
 
 import java.nio.file.Paths;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
+import com.microsoft.playwright.Download;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
 import com.microsoft.playwright.options.WaitForSelectorState;
@@ -109,6 +112,32 @@ public class try_testing_this_page {
 		page.click(submit_btn);
 		page.waitForTimeout(2000);
 	}
+	
+	public void download_pdf() {
+	    try {
+	        page.navigate("https://www.websupergoo.com/abcpdf-download.aspx");
+	        overall_scroll_operation();
+
+	        // Wait for the download to start
+	        Download download = page.waitForDownload(() -> {
+	            page.locator(".trackedDownload.download-lnk-lrg").first().click();
+	        });
+	        take_screenshot();
+	        // Save the downloaded file
+	        download.saveAs(Paths.get("C:", "Users", "sneha", "Downloads", download.suggestedFilename()));
+	    } catch (Exception e) {
+	        System.err.println("Error reading file: " + e.getMessage());
+	    }
+	    
+	}
+
+	
+	public void take_screenshot() {
+		String timestamp= new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+		String path ="test-output/screenshots/"+"_ss"+"_"+timestamp+".png";
+		page.screenshot(new Page.ScreenshotOptions().setPath(Paths.get(path)).setFullPage(true));
+	}
+
 
 	public void overall_scroll_operation() {
 		// to make scroll for 1000 pixels only
