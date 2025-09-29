@@ -1,0 +1,11 @@
+Step 1 - Create a new folder for API Testing Project
+Step 2 - Open the folder in VS Code
+Step 3 - Open terminal on the location of the folder and run command:  
+npm init playwright@latest // to download the setup and example.spec.js is created at that time
+
+Step 4 - Check if demo tests are running fine using commands:
+npx playwright test //to run existing test
+npx playwright test --ui //to run api in playwright test by default it is saved in playwright test 
+npx playwright show-report // shows reports on the browser
+
+Step 5 - Create a new file for API Tests (api-tests.spec.js)
