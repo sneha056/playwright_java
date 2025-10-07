@@ -29,7 +29,7 @@ public class baseClass {
 		
 		//Reporting
 		extent =ExtentManager.getInstance();
-		test= extent.createTest(method.getName());
+		test= extent.createTest(method.getName()); //This creates a new test entry inside the report for each test method that is running.
 		
 		//playwright setup
 		System.out.println("launching browser");
