@@ -11,7 +11,7 @@
 <!-- <suite name="Parallel Suite" parallel="tests" thread-count="3">
     <test name="Test1">
         <classes>
-            <class name="tests.Orange_website"/> //orange_website is the name of website
+            <class name="tests.Orange_website"/> //orange_website is the name of class
         </classes>
     </test>
     <test name="Test2">
