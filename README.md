@@ -4,7 +4,7 @@ Main Branch: Creating reports
 
 All Gestures Branch: Data Annotation that helps you to organise test cases and to pass different sets of data into test method used in large set of data(Eg login with different email and pass).
                     Every gestures from basic to advance like drop down, scroll, file upload, file download, handling alerts...
-                    To run test cases parallel for time saving.
+                    To run test cases parallel for time saving in testng.xml file.
 
 Api testing Branch: It includes testing API using playwright and all time taken, status code everything can be validated using playwright test.
                     Commands are written in commands.txt file.
