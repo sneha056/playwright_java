@@ -23,6 +23,7 @@ public class baseClass {
 		playwright =Playwright.create();
 		browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(2000)); //setHeadless(false)=> Playwright will open a visible browser window so you can see what’s happening.
 		page=browser.newPage();
+		
 	}
 	
 	@AfterClass

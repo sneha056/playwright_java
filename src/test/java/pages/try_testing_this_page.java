@@ -32,10 +32,16 @@ public class try_testing_this_page {
 	}
 
 	public void checkbox() {
-		page.click(male_checkBox);
-		//wait is performed that when male_checkbox is clicked then only female_checkbox has to be clicked
-		page.waitForFunction("el => el.checked", male_checkBox, new Page.WaitForFunctionOptions().setTimeout(2000));
-		page.click(female_checkBox);
+	    page.click(male_checkBox);
+
+	    // Wait until the male checkbox is checked
+	    page.waitForFunction(
+	        "selector => document.querySelector(selector).checked",
+	        male_checkBox,
+	        new Page.WaitForFunctionOptions().setTimeout(4000)
+	    );
+
+	    page.click(female_checkBox);
 	}
 
 	public void dropdown_handle() throws InterruptedException {
@@ -47,7 +53,7 @@ public class try_testing_this_page {
 	}
 
 	public void select_date() {
-		page.locator("//input[@type='date']").fill("2023-12-25");
+		page.locator("//input[@type='date']").fill("2023-12-25");// 2 blackslash is used beacuse it is XPath
 	}
 
 	public void range() {

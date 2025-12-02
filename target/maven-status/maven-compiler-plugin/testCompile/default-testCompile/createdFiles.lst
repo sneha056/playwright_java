@@ -1,5 +1,8 @@
 tests\Orange_website.class
-utlis\screenshot_util.class
-utlis\ExtentManager.class
+pages\DataAnnotation_page.class
+tests\Data_Annotation.class
+tests\Try_testing_this.class
+pages\try_testing_this_page.class
 Base\baseClass.class
+pages\directory.class
 pages\Login.class

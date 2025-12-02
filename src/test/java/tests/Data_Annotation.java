@@ -12,7 +12,8 @@ public class Data_Annotation extends baseClass {
     @DataProvider(name = "loginTest")
     public Object[][] getData() {
         return new Object[][] {
-            {"manish.singh@lng-consultancy.com", "Abcd1234#"}
+            {"manish.singh@lng-consultancy.com", "Abcd1234#"},
+            {"hello","123"}
             //{"manpreet.singh@lng-consultancy.com", "India@1234"}
         };
     }
