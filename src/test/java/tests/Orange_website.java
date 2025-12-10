@@ -21,12 +21,12 @@ public class Orange_website extends baseClass {
     	test.info("navigating to Recruitment page ");
     
     }
-    @Test
+  
     public void home_page2() {
     	test.info("skipping this test case");
     	throw new SkipException("skipping this test case");
     }
-    @Test
+  
     public void home_page3() throws InterruptedException {
     	test.info("navigating to the page");
     	page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
