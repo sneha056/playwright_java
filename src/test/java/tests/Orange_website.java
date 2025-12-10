@@ -8,7 +8,7 @@ import Base.baseClass;
 import pages.Login;
 
 public class Orange_website extends baseClass {
-    @Test
+    
     public void home_page() throws InterruptedException  {
     	test.info("navigating to the page");
     	page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
@@ -26,7 +26,7 @@ public class Orange_website extends baseClass {
     	test.info("skipping this test case");
     	throw new SkipException("skipping this test case");
     }
-  
+    @Test
     public void home_page3() throws InterruptedException {
     	test.info("navigating to the page");
     	page.navigate("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
