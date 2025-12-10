@@ -25,7 +25,7 @@ public class baseClass {
 
     @BeforeMethod
     public void setup(Method method) {
-
+        System.out.println("Launching Browser");
         // Reporting
         extent = ExtentManager.getInstance();
         test = extent.createTest(method.getName());
@@ -48,7 +48,7 @@ public class baseClass {
 
     @AfterMethod
     public void teardown(ITestResult result) {
-
+         System.out.println("Closing Browser");
         // Reporting logic
         if (result.getStatus() == ITestResult.FAILURE) {
             test.fail(result.getThrowable());
